@@ -1,0 +1,32 @@
+{
+  "name": "spatel",
+  "version": "1.0.0",
+  "description": "protfolio",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node node_modules/node-sass/bin/node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server --browser=firefox",
+    "start": "node node_modules/npm-run-all/bin/npm-run-all/ --parallel devserver watch:sass",
+    "compile:sass": "node node_modules/node-sass/bin/node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": " node node_modules/postcss-cli/bin/postcss css/style.concat.css --use autoprefixer -o css/style.prefix.css",
+    "compress:css": "node node_modules/node-sass/bin/node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "node node_modules/npm-run-all/bin/npm-run-all/ compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sneh96/spatel.git"
+  },
+  "author": "Snehal Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sneh96/spatel/issues"
+  },
+  "homepage": "https://github.com/sneh96/spatel#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
+  }
+}

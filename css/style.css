@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #f9f7f6;
+  font-weight: 300;
+  line-height: 1.6;
+  background-image: linear-gradient(to right, #16222a, #3a6073); }
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: [full-start] 6rem [center-start] 1fr [center-end] 6rem [full-end]; }
+
+.header {
+  background-color: orangered;
+  grid-column: full-start / full-end; }
+
+.about {
+  background-color: yellow;
+  grid-column: center-start / center-end; }
+
+.tech {
+  background-color: green;
+  grid-column: center-start / center-end; }
+
+.projects {
+  background-color: blue;
+  grid-column: center-start / center-end; }
+
+.contact {
+  background-color: cadetblue;
+  grid-column: center-start / center-end; }
+
+.footer {
+  background-color: orange;
+  grid-column: full-start / full-end; }

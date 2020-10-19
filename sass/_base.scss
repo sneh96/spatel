@@ -1,0 +1,41 @@
+// COLOR VARIABLES
+$color-primary: #16222a;
+
+$color-secondary: #3a6073;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+// FONT VARIABLES
+$font-primary: "Lato", sans-serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-light-1;
+  font-weight: 300;
+  line-height: 1.6;
+  background-image: linear-gradient(to right, $color-primary, $color-secondary);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns:
+    [full-start] 6rem [center-start] 1fr [center-end]
+    6rem [full-end];
+  //grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  //grid-template-columns: repeat(8 minmax(min-content, 14rem));
+}
