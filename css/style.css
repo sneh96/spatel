@@ -13,17 +13,96 @@ body {
   font-family: "Lato", sans-serif;
   color: #f9f7f6;
   font-weight: 300;
-  line-height: 1.6;
-  background-image: linear-gradient(to right, #16222a, #3a6073); }
+  line-height: 1.6; }
 
 .container {
   display: grid;
-  grid-template-rows: 100vh;
+  grid-template-rows: 100vh min-content;
   grid-template-columns: [full-start] 6rem [center-start] 1fr [center-end] 6rem [full-end]; }
 
 .header {
-  background-color: orangered;
-  grid-column: full-start / full-end; }
+  background-image: linear-gradient(to right, #000000, #434343);
+  -webkit-clip-path: 0 0, 100% 0, 100% 75vh, 0 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: min-content 1fr 1fr;
+  grid-template-rows: 10vh 70vh 20vh; }
+  .header__logo {
+    height: 6rem;
+    justify-self: center;
+    align-self: center; }
+  .header__text {
+    grid-column: 2 / -1;
+    padding: 6rem 2rem; }
+
+.nav {
+  grid-column: 3 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: center;
+  justify-items: center; }
+  .nav__item {
+    list-style: none; }
+  .nav__link:link, .nav__link:visited {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: inherit;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: all 0.2s; }
+  .nav__link:hover, .nav__link:active {
+    transform: scale(1.1);
+    border-bottom: 1px solid #f9f7f6; }
+
+.heading-1, .heading-3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
+
+.heading-1 {
+  font-size: 4.5rem;
+  letter-spacing: 0.5rem; }
+
+.heading-3 {
+  font-size: 1.6rem;
+  padding-left: 1rem;
+  letter-spacing: 0.2rem; }
+
+.btn {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
+  .btn:hover {
+    background-color: #434343;
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+    .btn:hover:visited {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      transform: translateY(0); }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-hg {
+  margin-bottom: 8rem; }
 
 .about {
   background-color: yellow;

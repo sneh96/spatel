@@ -1,7 +1,7 @@
 // COLOR VARIABLES
-$color-primary: #16222a;
+$color-primary: #000000;
 
-$color-secondary: #3a6073;
+$color-secondary: #434343;
 
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
@@ -27,15 +27,12 @@ body {
   color: $color-grey-light-1;
   font-weight: 300;
   line-height: 1.6;
-  background-image: linear-gradient(to right, $color-primary, $color-secondary);
 }
 
 .container {
   display: grid;
-  grid-template-rows: 100vh;
+  grid-template-rows: 100vh min-content;
   grid-template-columns:
     [full-start] 6rem [center-start] 1fr [center-end]
     6rem [full-end];
-  //grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  //grid-template-columns: repeat(8 minmax(min-content, 14rem));
 }
