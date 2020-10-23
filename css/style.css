@@ -18,7 +18,8 @@ body {
 .container {
   display: grid;
   grid-template-rows: 100vh min-content;
-  grid-template-columns: [full-start] 6rem [center-start] 1fr [center-end] 6rem [full-end]; }
+  grid-template-columns: [full-start] 6rem [center-start] 1fr [center-end] 6rem [full-end];
+  background-color: #f7f7f7; }
 
 .header {
   background-image: linear-gradient(to right, #000000, #434343);
@@ -59,13 +60,17 @@ body {
     transform: scale(1.1);
     border-bottom: 1px solid #f9f7f6; }
 
-.heading-1, .heading-3 {
+.heading-1, .heading-2, .heading-3 {
   font-family: "Lato", sans-serif;
   font-weight: 400; }
 
 .heading-1 {
   font-size: 4.5rem;
   letter-spacing: 0.5rem; }
+
+.heading-2 {
+  font-size: 3.5rem;
+  letter-spacing: 0.2rem; }
 
 .heading-3 {
   font-size: 1.6rem;
@@ -105,8 +110,20 @@ body {
   margin-bottom: 8rem; }
 
 .about {
-  background-color: yellow;
-  grid-column: center-start / center-end; }
+  background-color: #f7f7f7;
+  grid-column: center-start / center-end;
+  color: #000;
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 2rem;
+  justify-items: center; }
+  .about__title-2 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3; }
+  .about__text {
+    grid-column: 1 / 2;
+    font-size: 1.5rem; }
 
 .tech {
   background-color: green;

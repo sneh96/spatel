@@ -9,6 +9,9 @@
 }
 
 .heading-2 {
+  @extend %heading;
+  font-size: 3.5rem;
+  letter-spacing: 0.2rem;
 }
 
 .heading-3 {
