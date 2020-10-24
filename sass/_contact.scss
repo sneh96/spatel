@@ -12,10 +12,11 @@
   }
 
   &-box {
-    padding: 4rem;
+    padding: 6rem 3rem;
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 15% 35% 50%;
+    grid-row-gap: 4rem;
     justify-items: center;
     align-items: center;
     border: 1px solid $color-secondary;
@@ -38,7 +39,6 @@
     border: none;
     border-bottom: 3px solid transparent;
     display: block;
-    margin: 1rem;
     width: 90%;
     grid-column: 2 / 3;
   }
@@ -58,6 +58,31 @@
       color: currentColor;
       transition: all 0.2s;
       color: #000;
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / 2;
+    background-color: $color-secondary;
+    color: $color-grey-light-1;
+    border: none;
+    border-radius: 0;
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 1rem 2rem rgba(#000, 0.15);
+
+      &:visited {
+        box-shadow: 0 0.5rem 1rem rgba(#000, 0.15);
+        transform: translateY(0);
+      }
     }
   }
 }

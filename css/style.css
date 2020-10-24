@@ -247,10 +247,11 @@ body {
     grid-column: 2 / 3;
     justify-self: center; }
   .contact-box {
-    padding: 4rem;
+    padding: 6rem 3rem;
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 15% 35% 50%;
+    grid-row-gap: 4rem;
     justify-items: center;
     align-items: center;
     border: 1px solid #434343;
@@ -269,7 +270,6 @@ body {
     border: none;
     border-bottom: 3px solid transparent;
     display: block;
-    margin: 1rem;
     width: 90%;
     grid-column: 2 / 3; }
   .contact-email {
@@ -283,7 +283,64 @@ body {
       color: currentColor;
       transition: all 0.2s;
       color: #000; }
+  .contact__btn {
+    grid-column: 1 / 2;
+    background-color: #434343;
+    color: #f9f7f6;
+    border: none;
+    border-radius: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s; }
+    .contact__btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+      .contact__btn:hover:visited {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        transform: translateY(0); }
 
 .footer {
-  background-color: orange;
-  grid-column: full-start / full-end; }
+  padding: 6rem 3rem;
+  color: #f9f7f6;
+  background-color: #333;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: 3rem repeat(auto-fit, minmax(35rem, 1fr)) 3rem;
+  grid-row-gap: 5rem; }
+  .footer__logo {
+    grid-column: 2 / 4;
+    width: 4rem;
+    justify-self: center; }
+  .footer__nav {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-items: center;
+    list-style: none; }
+    .footer__nav--item {
+      padding: 2rem 3rem;
+      transition: all 0.2s; }
+      .footer__nav--item:hover {
+        transform: translateY(-2px);
+        background-color: #434343;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+    .footer__nav--link:link, .footer__nav--link:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: inherit; }
+  .footer__icon {
+    grid-column: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 5rem));
+    justify-content: end;
+    align-items: center; }
+    .footer__icon--svg {
+      fill: #f9f7f6;
+      width: 3rem;
+      height: 3rem; }

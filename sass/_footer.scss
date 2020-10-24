@@ -1,4 +1,58 @@
 .footer {
-  background-color: orange;
+  padding: 6rem 3rem;
+  color: $color-grey-light-1;
+  background-color: $color-background-grey-dark;
   grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-columns: 3rem repeat(auto-fit, minmax(35rem, 1fr)) 3rem;
+  grid-row-gap: 5rem;
+
+  &__logo {
+    grid-column: 2 / 4;
+    width: 4rem;
+    justify-self: center;
+  }
+
+  &__nav {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-items: center;
+    list-style: none;
+
+    &--item {
+      padding: 2rem 3rem;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: translateY(-2px);
+        background-color: $color-secondary;
+        box-shadow: 0 1rem 2rem rgba(#000, 0.15);
+      }
+    }
+
+    &--link:link,
+    &--link:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: inherit;
+    }
+  }
+
+  &__icon {
+    grid-column: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 5rem));
+    justify-content: end;
+    align-items: center;
+
+    &--svg {
+      fill: $color-grey-light-1;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
 }
