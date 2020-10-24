@@ -47,6 +47,33 @@
   }
 }
 
+.project__btn {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  font-family: $font-primary;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 1.8rem 1rem;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $color-grey-light-1;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 2rem rgba(#000, 0.15);
+
+    &:visited {
+      box-shadow: 0 0.5rem 1rem rgba(#000, 0.15);
+      color: #000;
+      transform: translateY(0);
+    }
+  }
+}
+
 .mb-sm {
   margin-bottom: 2rem;
 }
