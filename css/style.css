@@ -22,7 +22,7 @@ body {
   background-color: #f7f7f7; }
 
 .header {
-  background-image: linear-gradient(to right, #000000, #434343);
+  background-image: linear-gradient(to right bottom, #000000, #434343);
   -webkit-clip-path: 0 0, 100% 0, 100% 75vh, 0 100%;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   grid-column: full-start / full-end;
