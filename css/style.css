@@ -30,7 +30,8 @@ body {
   grid-template-columns: min-content 1fr 1fr;
   grid-template-rows: 10vh 70vh 20vh; }
   .header__logo {
-    height: 6rem;
+    height: 5rem;
+    width: 5rem;
     justify-self: center;
     align-self: center; }
   .header__text {
@@ -131,11 +132,16 @@ body {
 .mb-hg {
   margin-bottom: 8rem; }
 
+.mt-lg {
+  margin-top: 8rem; }
+
+.mt-hg {
+  margin-top: 12rem; }
+
 .about {
   background-color: #f7f7f7;
   grid-column: center-start / center-end;
   color: #000;
-  padding: 3rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-row-gap: 2rem;
@@ -170,17 +176,21 @@ body {
       font-weight: 400; }
 
 .projects {
-  padding: 6rem 3rem;
+  padding: 10rem 3rem;
   background-image: linear-gradient(to right bottom, #333333, #333333);
+  transform: skewY(-5deg);
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: 3rem 1fr 3rem;
   grid-row-gap: 3rem; }
+  .projects > * {
+    transform: skewY(5deg); }
   .projects__title {
     grid-column: 2 / 3;
     justify-self: center; }
 
 .project {
+  padding: 6rem 0;
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -204,6 +214,11 @@ body {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 1rem;
       justify-items: center; }
+    .project__item--iconBox3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 1rem;
+      justify-items: center; }
     .project__item--name {
       font-size: 2rem;
       font-weight: 400;
@@ -223,8 +238,51 @@ body {
       align-items: center; }
 
 .contact {
-  background-color: cadetblue;
-  grid-column: center-start / center-end; }
+  padding: 6rem 0;
+  color: #434343;
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem; }
+  .contact__title {
+    grid-column: 2 / 3;
+    justify-self: center; }
+  .contact-box {
+    padding: 4rem;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 15% 35% 50%;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid #434343;
+    border-radius: 3px; }
+  .contact__label {
+    font-size: 1.3rem;
+    font-weight: 400;
+    grid-column: 1 / 2; }
+  .contact__input {
+    background-color: #434343;
+    color: #f9f7f6;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    display: block;
+    margin: 1rem;
+    width: 90%;
+    grid-column: 2 / 3; }
+  .contact-email {
+    grid-column: 3 /-1;
+    grid-row: 1 / -1; }
+    .contact-email__text {
+      font-size: 1.5rem;
+      font-weight: 400; }
+    .contact-email__link:link, .contact-email__link:visited {
+      text-decoration: none;
+      color: currentColor;
+      transition: all 0.2s;
+      color: #000; }
 
 .footer {
   background-color: orange;

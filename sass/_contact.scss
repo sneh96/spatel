@@ -1,4 +1,63 @@
 .contact {
-  background-color: cadetblue;
+  padding: 6rem 0;
+  color: $color-secondary;
   grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+
+  &__title {
+    grid-column: 2 / 3;
+    justify-self: center;
+  }
+
+  &-box {
+    padding: 4rem;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 15% 35% 50%;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid $color-secondary;
+    border-radius: 3px;
+  }
+
+  &__label {
+    font-size: 1.3rem;
+    font-weight: 400;
+    grid-column: 1 / 2;
+  }
+
+  &__input {
+    background-color: $color-secondary;
+    color: $color-grey-light-1;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    display: block;
+    margin: 1rem;
+    width: 90%;
+    grid-column: 2 / 3;
+  }
+
+  &-email {
+    grid-column: 3 /-1;
+    grid-row: 1 / -1;
+
+    &__text {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      color: currentColor;
+      transition: all 0.2s;
+      color: #000;
+    }
+  }
 }

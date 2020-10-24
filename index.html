@@ -12,8 +12,11 @@
     <title>spatel &mdash; front-end developer</title>
   </head>
   <body class="container">
+
+    <!-- Header Block -->
+
     <header class="header">
-      <img src="img/logo-3-01.svg" alt="logo" class="header__logo" />
+      <img src="img/White_logo-01.svg" alt="logo" class="header__logo" />
       <ul class="nav">
         <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
         <li class="nav__item"><a href="#" class="nav__link">About</a></li>
@@ -30,8 +33,11 @@
         <button class="btn">Learn more &rarr;</button>
       </div>
     </header>
-    <section class="about mb-hg">
-      <h2 class="about__title-1 heading-2">I build value by design</h2>
+    <section class="about mt-lg mb-hg">
+
+      <!-- About Me -->
+
+      <h2 class="about__title-1 heading-2 mb-md">I build value by design</h2>
       <p class="about__text">
         Originally halling from the Gujarat, India and for the past 2 years I
         had been living in Montreal, Canada. I completed my bachelor's in IT in
@@ -43,7 +49,10 @@
         resources provided I've gained the knowledge of Front-End Technologies
         and Back-End Technologies.
       </p>
-      <h2 class="about__title-2 heading-2">Technologies</h2>
+
+      <!-- Technologies Block -->
+
+      <h2 class="about__title-2 heading-2 mb-md">Technologies</h2>
       <div class="about__technologies">
         <div class="about__tech">
           <svg class="about__tech--icon">
@@ -120,7 +129,7 @@
       </div>
       </div>
     </section>
-    <section class="projects">
+    <section class="projects mt-hg mb-hg">
       <h2 class=" projects__title heading-2">Projects</h2>
       <div class="project">
 
@@ -246,9 +255,48 @@
           <button class="project__btn">preview</button>
         </div>
       </div>
+
+      <!-- Project 6 -->
+
+      <div class="project__item">
+        <p class="project__item--name">RecipeBook</p>
+        <p class="project__item--text">Technologies used : </p>
+        <div class="project__item--iconBox3">
+          <svg class="project__item--icon">
+            <use xlink:href="img/sprite.svg#icon-html5"></use>
+          </svg>
+          <svg class="project__item--icon">
+            <use xlink:href="img/sprite.svg#icon-css3"></use>
+          </svg>
+          <svg class="project__item--icon">
+            <use xlink:href="img/sprite.svg#icon-react"></use>
+          </svg>
+          <img src="img/matrial-ui-logo.png" class="project__item--icon" alt="material ui logo">
+        </div>
+        <p class="project__item--description">
+          RecipeBook is an final project for our college which we build in React js with Material UI to make it look better. RecipeBook where user can serach the recipe by name or by its ingredients. We have used Edamam API for the data. RecipeBook was a team project consist of 4 members.
+        </p>
+        <div class="project__item--link">
+          <button class="project__btn">source code</button>
+          <button class="project__btn">preview</button>
+        </div>
+      </div>
       </div>
     </section>
-    <section class="contact">Contact form</section>
+    <section class="contact">
+      <h2 class="contact__title heading-2 mb-md">Contact Me</h2>
+      <div class="contact-box">
+        <label for="name" class="contact__label">Full name</label>
+        <input type="text" id="name" class="contact__input">
+        <label for="email" class="contact__label">Email</label>
+        <input type="email" id="email" class="contact__input">
+        <label for="textarea" class="contact__label">Message</label>
+        <textarea id="textarea" class="contact__input"></textarea>
+        <div class="contact-email">
+          <p class="contact-email__text">Contact me direct via email <a href="mailto:snehalpatel.dev@gmail.com" class="contact-email__link">snehalpatel.dev@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
     <footer class="footer">Footer</footer>
   </body>
 </html>

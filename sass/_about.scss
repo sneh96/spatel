@@ -2,7 +2,6 @@
   background-color: $color-background-grey;
   grid-column: center-start / center-end;
   color: #000;
-  padding: 3rem 0;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
